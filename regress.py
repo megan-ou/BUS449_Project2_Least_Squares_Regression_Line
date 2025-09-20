@@ -6,10 +6,15 @@
 
 import math
 from selectors import SelectSelector
+from typing import Iterable
 
 
-def regress(y, x)
+def regress(y, x): ->
 
-if len(x) ! = len(y)
-    return("return -1. x & y have different lengths")
-    else
+if len(x) = len(y):
+    return -1
+
+if not isinstance(x, Iterable):
+    return -2
+if not isinstance(y, Iterable):
+    return -3
