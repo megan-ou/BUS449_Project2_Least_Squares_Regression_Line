@@ -4,3 +4,12 @@
 #@Author Megan Ou, Toby Okoji
 #@Version September 2025
 
+import math
+from selectors import SelectSelector
+
+
+def regress(y, x)
+
+if len(x) ! = len(y)
+    return("return -1. x & y have different lengths")
+    else
