@@ -67,7 +67,7 @@ def regress_comp(y, x):
     if not isiterable(y):
         return -3
 
-    valid = all([isinstance(x[i], Number) or isinstance(y[i], Number) for i in len(x)]):
+    valid = all([isinstance(x[i], Number) or isinstance(y[i], Number) for i in range(len(x))])
 
     if valid == False:
         return -4
