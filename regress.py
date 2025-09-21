@@ -9,16 +9,17 @@ from numbers import Number
 from toolz import isiterable
 
 def regress(y, x):
-    #Check to see if x and y amount same
-    if len(x) != len(y):
-        return -1
-
     #checking for proper x data type
     if not isiterable(x):
         return -2
 
     if not isiterable(y):
         return -3
+
+    # Check to see if x and y amount same
+    # Check length only if x or y are iterables because len() will not work on a non-iterable
+    if len(x) != len(y):
+        return -1
 
     valid = None
 
@@ -59,13 +60,13 @@ def regress(y, x):
     return(beta_0, beta_1)
 
 def regress_comp(y, x):
-    if len(x) != len(y):
-        return -1
-
     if not isiterable(x):
         return -2
     if not isiterable(y):
         return -3
+
+    if len(x) != len(y):
+        return -1
 
     valid = all([isinstance(x[i], Number) or isinstance(y[i], Number) for i in range(len(x))])
 
