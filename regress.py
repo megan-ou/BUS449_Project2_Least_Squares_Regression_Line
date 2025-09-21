@@ -80,8 +80,8 @@ def regress_comp(y, x):
     x_mean = 0
     y_mean = 0
 
-    x_mean = math.sum(x)/len(x)
-    y_mean = math.sum(y)/len(y)
+    x_mean = sum(x)/len(x)
+    y_mean = sum(y)/len(y)
 
     numerator = [(x[i] - x_mean)*(y[i] - y_mean) for i in range(len(x))]
     denominator = [(x[i] - x_mean)**2 for i in range(len(x))]
