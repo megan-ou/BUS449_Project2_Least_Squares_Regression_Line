@@ -10,7 +10,7 @@ import math
 #Define data list from excel as instance variables; used to test for valid cases
 #Import method found on Stack Overflow
 #https://stackoverflow.com/questions/45708626/read-data-in-excel-column-into-python-list
-df = pd.read_excel('regress_data.xlsx')
+df = pd.read_excel('regress_data.csv')
 x_data_list = df['x'].tolist()
 y_data_list = df['y'].tolist()
 
