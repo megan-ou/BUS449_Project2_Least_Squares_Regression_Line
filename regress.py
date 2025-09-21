@@ -75,16 +75,21 @@ def regress_comp(y, x):
 
     beta_0 = 0
     beta_1 = 0
+    numerator_list = 0
+    denominator_list = 0
     numerator = 0
     denominator = 0
     x_mean = 0
     y_mean = 0
 
-    x_mean = math.sum(x)/len(x)
-    y_mean = math.sum(y)/len(y)
+    x_mean = sum(x)/len(x)
+    y_mean = sum(y)/len(y)
 
-    numerator = [(x[i] - x_mean)*(y[i] - y_mean) for i in range(len(x))]
-    denominator = [(x[i] - x_mean)**2 for i in range(len(x))]
+    numerator_list = [(x[i] - x_mean)*(y[i] - y_mean) for i in range(len(x))]
+    denominator_list = [(x[i] - x_mean)**2 for i in range(len(x))]
+
+    numerator = sum(numerator_list)
+    denominator = sum(denominator_list)
 
     if denominator == 0:
         return -math.inf
