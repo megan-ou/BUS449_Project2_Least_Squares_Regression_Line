@@ -8,6 +8,8 @@ import math
 from numbers import Number
 from wsgiref.util import request_uri
 from toolz import isiterable
+from toolz.functoolz import return_none
+
 
 def regress(y, x):
     #Check to see if x and y amount same
@@ -56,5 +58,40 @@ def regress(y, x):
 
     beta_1 = (numerator/denominator)
     beta_0 = (beta_1 * x_mean)
+
+    return(beta_0, beta_1)
+
+def regress_comp(y, x):
+    if len(x) != len(y):
+        return -1
+
+    if not isiterable(x):
+        return -2
+    if not isiterable(y):
+        return -3
+
+    valid = all([isinstance(x[i], Number) or isinstance(y[i], Number) for i in len(x)]):
+
+    if valid == false
+        return -4
+
+    beta_0 = 0
+    beta_1 = 0
+    numerator = 0
+    denominator = 0
+    x_mean = 0
+    y_mean = 0
+
+    x_mean = math.sum(x)/len(x)
+    y_mean = mant.sum(y)/len(y)
+
+    numerator = [(x[i] - x_mean)*(y[i] - y_mean) for i in range(len(x))]
+    denominator = [(x[i] - x_mean)**2 for i in range(len(x))]
+
+    if denominator == 0
+        return -math.inf
+
+    beta_1 = numerator/denominator
+    beta_0 = y_mean - beta_1 * x_mean
 
     return(beta_0, beta_1)
