@@ -1,12 +1,12 @@
+import math
+from numbers import Number
+from toolz import isiterable
+
 #regress.py
 #Calculates Least Squares Regression Line for a set of data in two different ways.
 #Finds beta_0 and beta_1 coefficients
 #@Author Megan Ou, Toby Okoji
 #@Version September 2025
-
-import math
-from numbers import Number
-from toolz import isiterable
 
 def regress(y, x):
     """
