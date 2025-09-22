@@ -7,7 +7,7 @@ import math
 #@Author Megan Ou
 #@Version September 2025
 
-#Define data list from excel as instance variables; used to test for valid cases
+#Define data list from csv as instance variables; used to test for valid cases
 #Import method found on Stack Overflow
 #https://stackoverflow.com/questions/45708626/read-data-in-excel-column-into-python-list
 df = pd.read_csv('regress_data.csv')
