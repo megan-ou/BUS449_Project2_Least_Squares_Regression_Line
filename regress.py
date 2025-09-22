@@ -55,7 +55,7 @@ def regress(y, x):
         return -math.inf
 
     beta_1 = (numerator/denominator)
-    beta_0 = (beta_1 * x_mean)
+    beta_0 = y_mean - beta_1 * x_mean
 
     solution = (beta_0,beta_1)
 
@@ -70,9 +70,9 @@ def regress_comp(y, x):
     if len(x) != len(y):
         return -1
 
-    if not all([isinstance(x[i], Number) for i in range(len(x))]):
+    if all([isinstance(x[i], Number) for i in range(len(x))]):
         return -4
-    if not all([isinstance(y[i],Number) for i in range(len(y))]):
+    if all([isinstance(y[i],Number) for i in range(len(y))]):
         return -4
 
     beta_0 = 0
