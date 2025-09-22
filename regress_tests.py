@@ -18,7 +18,7 @@ def test_regress():
     """
     Test to see is regress() works in edge cases
     """
-    #First test for valid cases
+    #First test for a valid case
     regress_expected = (2144.73728, 2.774427114)
     regress_actual = regress.regress(y_data_list,x_data_list)
 
@@ -99,7 +99,7 @@ def test_regress_comp():
     Copy/pasted tests from test_regress() because test cases are the exact same. I'm not
     entirely sure if I can come up with more unique tests for this?
     """
-    # First test for valid cases
+    # First test for a valid case
     regress_expected = (2144.73728, 2.774427114)
     regress_actual = regress.regress(y_data_list, x_data_list)
 
