@@ -57,7 +57,9 @@ def regress(y, x):
     beta_1 = (numerator/denominator)
     beta_0 = (beta_1 * x_mean)
 
-    return(beta_0, beta_1)
+    solution = (beta_0,beta_1)
+
+    return solution
 
 def regress_comp(y, x):
     if not isiterable(x):
@@ -75,10 +77,10 @@ def regress_comp(y, x):
     beta_1 = 0
     numerator_list = 0
     denominator_list = 0
-    numerator = 0
-    denominator = 0
-    x_mean = 0
-    y_mean = 0
+    numerator = 0.0
+    denominator = 0.0
+    x_mean = 0.0
+    y_mean = 0.0
 
     x_mean = sum(x)/len(x)
     y_mean = sum(y)/len(y)
@@ -95,4 +97,6 @@ def regress_comp(y, x):
     beta_1 = numerator/denominator
     beta_0 = y_mean - beta_1 * x_mean
 
-    return(beta_0, beta_1)
+    solution = (beta_0,beta_1)
+
+    return solution
