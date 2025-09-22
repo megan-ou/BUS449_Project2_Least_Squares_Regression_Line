@@ -55,7 +55,7 @@ def regress(y, x):
         return -math.inf
 
     beta_1 = (numerator/denominator)
-    beta_0 = (beta_1 * x_mean)
+    beta_0 = y_mean - beta_1 * x_mean
 
     solution = (beta_0,beta_1)
 
