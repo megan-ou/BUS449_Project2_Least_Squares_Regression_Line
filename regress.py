@@ -70,7 +70,9 @@ def regress_comp(y, x):
     if len(x) != len(y):
         return -1
 
-    if all([isinstance(x[i], Number) or isinstance(y[i], Number) for i in range(len(x))]):
+    if not all([isinstance(x[i], Number) for i in range(len(x))]):
+        return -4
+    if not all([isinstance(y[i],Number) for i in range(len(y))]):
         return -4
 
     beta_0 = 0
