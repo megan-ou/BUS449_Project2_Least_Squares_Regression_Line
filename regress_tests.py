@@ -22,7 +22,7 @@ def test_regress():
     regress_expected = (2144.73728, 2.774427114)
     regress_actual = regress.regress(y_data_list,x_data_list)
 
-    if (regress_expected == regress_actual):
+    if math.isclose(regress_expected[0], regress_actual[0]) and math.isclose(regress_expected[1], regress_actual[1]):
         print("Valid test for valid input: passed")
     else:
         print("Invlaid test for valid input: failed")
@@ -103,7 +103,7 @@ def test_regress_comp():
     regress_expected = (2144.73728, 2.774427114)
     regress_actual = regress.regress(y_data_list, x_data_list)
 
-    if (regress_expected == regress_actual):
+    if math.isclose(regress_expected[0], regress_actual[0]) and math.isclose(regress_expected[1], regress_actual[1]):
         print("Valid test for valid input: passed")
     else:
         print("Invlaid test for valid input: failed")
