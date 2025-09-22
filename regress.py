@@ -5,7 +5,7 @@ from toolz import isiterable
 #regress.py
 #Calculates Least Squares Regression Line for a set of data in two different ways.
 #Finds beta_0 and beta_1 coefficients
-#@Author Megan Ou, Toby Okoji
+#@Author Toby Okoji, Megan Ou
 #@Version September 2025
 
 def regress(y, x):
